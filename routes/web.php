@@ -23,4 +23,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/register-customer', [CustomerController::class,'register'])->name('register-customer');
+Route::get('/editar-customer', [CustomerController::class,'edit'])->name('customer.edit');
+Route::post('/store-customer', [CustomerController::class,'store'])->name('store-customer');
 Route::get('/list-customers', [CustomerController::class,'index'])->name('list-customers');
